@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">projeto01_calculadora</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="firstFragment">FirstFragment</string>
+    <string name="secondtFragment">SecondFragment</string>
+    <string name="firstTabTitle">Calculadora</string>
+</resources>
