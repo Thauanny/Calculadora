@@ -1,16 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NotasFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:orientation="vertical">
 
-        android:text="@string/secondtFragment" />
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/title2fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/title2fragment"
+            android:textColor="@color/purple_700"
+            android:textSize="28dp"
+            android:textStyle="bold" />
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/decriptionNota1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Calcule sua primeira nota:"
+            android:textColor="@color/purple_700"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nota1"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:paddingLeft="24dp"
+            android:layout_marginVertical="16dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/rounded_corner_numeric_button"
+            android:hint="7,0"
+            android:inputType="text"
+            android:text="" />
+
+
+        <TextView
+            android:id="@+id/decriptionNota2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Calcule sua primeira nota:"
+            android:textColor="@color/purple_700"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nota2"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:paddingLeft="24dp"
+            android:layout_marginVertical="16dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/rounded_corner_numeric_button"
+            android:hint="7,0"
+            android:inputType="text"
+            android:text="" />
+
+
+        <TextView
+            android:id="@+id/decriptionNota3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+
+            android:gravity="center"
+            android:text="Calcule sua primeira nota:"
+            android:textColor="@color/purple_700"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nota3"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginVertical="16dp"
+            android:layout_weight="1"
+            android:paddingLeft="24dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/rounded_corner_numeric_button"
+            android:hint="7,0"
+            android:inputType="text"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner_numeric_button"
+            android:gravity="center"
+            android:text="Calcular"/>
+
+        <TextView
+            android:id="@+id/situacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Situação:"
+            android:textColor="@color/purple_700"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/resultadoNotas"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/purple_700"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

@@ -4,6 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 // TODO: Rename parameter arguments, choose names that match
@@ -28,13 +32,72 @@ class NotasFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_notas, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val etNota1 = view.findViewById<EditText>(R.id.nota1)
+        val etNota2 = view.findViewById<EditText>(R.id.nota2)
+        val etNota3 = view.findViewById<EditText>(R.id.nota3)
+        val btnCalcular = view.findViewById<Button>(R.id.btnCalcular)
+        val tvResultado = view.findViewById<TextView>(R.id.resultado)
+
+        btnCalcular.setOnClickListener {
+            val nota1Text = etNota1.text.toString()
+            val nota2Text = etNota2.text.toString()
+            val nota3Text = etNota3.text.toString()
+
+            if (nota1Text.isEmpty()) {
+                Toast.makeText(
+                    view.context,
+                    "Por favor, insira a nota da 1ª unidade",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            }
+
+            val nota1 = nota1Text.toFloatOrNull()
+            val nota2 = nota2Text.toFloatOrNull()
+            val nota3 = nota3Text.toFloatOrNull()
+
+            if (nota1 != null) {
+                if (nota2 != null && nota3 != null) {
+                    val media = (nota1 + nota2 + nota3) / 3
+
+                    if (media >= 7.0) {
+                        tvResultado.text = "Aprovado com média: $media"
+                    } else if (media >= 5.0) {
+                        tvResultado.text = "Aprovado por nota com média: $media"
+                    } else {
+                        tvResultado.text = "Reprovado com média: $media"
+                    }
+                } else if (nota2 != null) {
+                    val mediaNecessaria = (21 - (nota1 + nota2)) / 3
+
+                    if (mediaNecessaria <= 10) {
+                        tvResultado.text = "Com $mediaNecessaria na 3ª você será aprovado por média"
+                    } else {
+                        tvResultado.text = "Você não pode ser aprovado por média"
+                    }
+                } else {
+                    val notaNecessaria = (10 - nota1).coerceAtLeast(0f)
+
+                    if (notaNecessaria <= 10) {
+                        tvResultado.text = "Com $notaNecessaria na 2ª e na 3ª você será aprovado por nota"
+                    } else {
+                        tvResultado.text = "Você não pode ser aprovado por nota"
+                    }
+                }
+            }
+        }
+
+
     }
 
     companion object {

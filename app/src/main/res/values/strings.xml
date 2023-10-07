@@ -4,4 +4,9 @@
     <string name="firstFragment">FirstFragment</string>
     <string name="secondtFragment">SecondFragment</string>
     <string name="firstTabTitle">Calculadora</string>
+    <string name="title2fragment">Calcule sua média</string>
+    <string name="secondTabTitle">Notas</string>
+    <string name="title">Calculadora IMd</string>
+    <string name="dev">Desenvolvido por: Thauanny Ramos</string>
+
 </resources>

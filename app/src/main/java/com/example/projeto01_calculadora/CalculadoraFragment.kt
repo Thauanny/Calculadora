@@ -217,7 +217,6 @@ class CalculadoraFragment : Fragment() {
         val subtrair = view.findViewById<TextView>(R.id.subtrair);
         val multiplicar = view.findViewById<TextView>(R.id.multiplicar);
         val dividir = view.findViewById<TextView>(R.id.dividir);
-        val porcetagem = view.findViewById<TextView>(R.id.porcentagem);
         val igual = view.findViewById<TextView>(R.id.igual);
 
 
@@ -233,9 +232,7 @@ class CalculadoraFragment : Fragment() {
         dividir.setOnClickListener {
             acrescentarExpressao(view, "/", false);
         }
-        porcetagem.setOnClickListener {
-            acrescentarExpressao(view, "%", false);
-        }
+
         igual.setOnClickListener {
             realizarCalculo(view, true)
         }
@@ -276,7 +273,6 @@ class CalculadoraFragment : Fragment() {
                     resultado?.text =  calculoResultado.toString();
                 } else {
                     val a = calculoEvaluate.toString();
-                    resultado?.text = a;
                     resultado?.text = a;
 
                 }
