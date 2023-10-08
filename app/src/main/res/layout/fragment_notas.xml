@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:gravity="center"
-            android:text="@string/title2fragment"
+            android:text="@string/titleNotasPage"
             android:textColor="@color/purple_700"
             android:textSize="28dp"
             android:textStyle="bold" />
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:gravity="center"
-            android:text="Calcule sua primeira nota:"
+            android:text="@string/primeiraUnidade"
             android:textColor="@color/purple_700"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -43,7 +43,9 @@
             android:layout_weight="1"
             android:layout_marginHorizontal="16dp"
             android:background="@drawable/rounded_corner_numeric_button"
-            android:hint="7,0"
+            android:hint="@string/hintTextNotas"
+            android:textColor="@color/purple_700"
+            android:textColorHint="@color/purple_700WitOpacity"
             android:inputType="text"
             android:text="" />
 
@@ -52,9 +54,11 @@
             android:id="@+id/decriptionNota2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginVertical="16dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="16dp"
             android:gravity="center"
-            android:text="Calcule sua primeira nota:"
+            android:text="@string/segundaUnidade"
             android:textColor="@color/purple_700"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -68,7 +72,9 @@
             android:layout_weight="1"
             android:layout_marginHorizontal="16dp"
             android:background="@drawable/rounded_corner_numeric_button"
-            android:hint="7,0"
+            android:hint="@string/hintTextNotas"
+            android:textColor="@color/purple_700"
+            android:textColorHint="@color/purple_700WitOpacity"
             android:inputType="text"
             android:text="" />
 
@@ -77,10 +83,11 @@
             android:id="@+id/decriptionNota3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-
+            android:layout_marginVertical="16dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="16dp"
             android:gravity="center"
-            android:text="Calcule sua primeira nota:"
+            android:text="@string/terceiraUnidade"
             android:textColor="@color/purple_700"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -91,10 +98,12 @@
             android:layout_height="36dp"
             android:layout_marginVertical="16dp"
             android:layout_weight="1"
-            android:paddingLeft="24dp"
             android:layout_marginHorizontal="16dp"
+            android:paddingLeft="24dp"
             android:background="@drawable/rounded_corner_numeric_button"
-            android:hint="7,0"
+            android:hint="@string/hintTextNotas"
+            android:textColor="@color/purple_700"
+            android:textColorHint="@color/purple_700WitOpacity"
             android:inputType="text"
             android:text="" />
 
@@ -103,17 +112,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginVertical="16dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="16dp"
             android:background="@drawable/rounded_corner_numeric_button"
             android:gravity="center"
-            android:text="Calcular"/>
+            android:text="@string/buttonCalcularNotas"/>
 
         <TextView
             android:id="@+id/situacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginVertical="16dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="16dp"
             android:gravity="center"
-            android:text="Situação:"
+            android:text="@string/situacao"
             android:textColor="@color/purple_700"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -122,10 +136,13 @@
         <TextView
             android:id="@+id/resultadoNotas"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="24dp"
+           android:background="@drawable/rounded_corner_numeric_button"
+            android:layout_height="100dp"
+            android:layout_marginVertical="16dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="16dp"
             android:gravity="center"
-            android:text=""
+            android:text="@string/resultadoNotasHintText"
             android:textColor="@color/purple_700"
             android:textSize="16dp"
             android:textStyle="bold" />

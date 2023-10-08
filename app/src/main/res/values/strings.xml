@@ -1,12 +1,42 @@
 <resources>
+    <!--activity main -->
     <string name="app_name">projeto01_calculadora</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="firstFragment">FirstFragment</string>
-    <string name="secondtFragment">SecondFragment</string>
     <string name="firstTabTitle">Calculadora</string>
-    <string name="title2fragment">Calcule sua média</string>
     <string name="secondTabTitle">Notas</string>
-    <string name="title">Calculadora IMd</string>
-    <string name="dev">Desenvolvido por: Thauanny Ramos</string>
+    <string name="desenvolvidoPor">Desenvolvido por: Thauanny Ramos</string>
+    <string name="titleCalculadorasPage">Calculadora IMD</string>
+
+    <!--fragment calculadora -->
+    <string name="numero0">0</string>
+    <string name="numero1">1</string>
+    <string name="numero2">2</string>
+    <string name="numero3">3</string>
+    <string name="numero4">4</string>
+    <string name="numero5">5</string>
+    <string name="numero6">6</string>
+    <string name="numero7">7</string>
+    <string name="numero8">8</string>
+    <string name="numero9">9</string>
+    <string name="ponto">.</string>
+    <string name="virgula">,</string>
+    <string name="soma">+</string>
+    <string name="subtracao">—</string>
+    <string name="divisao">÷</string>
+    <string name="multiplicacao">x</string>
+    <string name="apagarTudo">C</string>
+    <string name="igual">=</string>
+
+
+    <!--fragment notas -->
+
+    <string name="titleNotasPage">Calcule sua média</string>
+    <string name="primeiraUnidade">"Calcule a nota da primeira unidade:"</string>
+    <string name="situacao">"Situação:"</string>
+    <string name="segundaUnidade">"Calcule a nota da segunda unidade:"</string>
+    <string name="terceiraUnidade">"Calcule a nota da terceira unidade:"</string>
+    <string name="resultadoNotasHintText">Insira suas notas para iniciar!</string>
+    <string name="buttonCalcularNotas">Calcular!</string>
+    <string name="hintTextNotas">Insira sua nota. Exemplo "7,0"</string>
+
 
 </resources>

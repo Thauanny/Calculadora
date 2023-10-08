@@ -5,6 +5,7 @@
     <color name="light_purple">#E6E6FA</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#936ACE</color>
+    <color name="purple_700WitOpacity">#465B468A</color>
     <color name="purple_700">#654F98</color>
     <color name="purple_900">#43336A</color>
     <color name="teal_200">#FF03DAD5</color>

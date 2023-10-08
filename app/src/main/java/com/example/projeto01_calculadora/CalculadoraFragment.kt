@@ -7,7 +7,6 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -43,7 +42,7 @@ class CalculadoraFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //preparar tela
-        setUp();
+        setUp(view);
 
         //eventos com relacao aos numeros
         eventosNumeros(view);
@@ -61,7 +60,7 @@ class CalculadoraFragment : Fragment() {
     }
 
     @SuppressLint("ClickableViewAccessibility")
-    private fun setUp() {
+    private fun setUp(view: View) {
 
         var expressao = view?.findViewById<TextInputEditText>(R.id.expressao);
 
@@ -71,7 +70,7 @@ class CalculadoraFragment : Fragment() {
         expressao?.setOnTouchListener { _, event ->
             if (event.action == android.view.MotionEvent.ACTION_UP) {
                 expressao.requestFocus();
-                hideKeyboard(expressao);
+                FragmentUtils.hideKeyboard(view);
                 return@setOnTouchListener true;
             }
 
@@ -106,13 +105,7 @@ class CalculadoraFragment : Fragment() {
         })
     }
 
-    private fun hideKeyboard(view: View) {
-        val inputMethodManager = requireContext().getSystemService(InputMethodManager::class.java);
-        inputMethodManager?.hideSoftInputFromWindow(
-            view.windowToken,
-            InputMethodManager.HIDE_NOT_ALWAYS
-        );
-    }
+
 
     private fun eventosNumeros(view: View) {
 

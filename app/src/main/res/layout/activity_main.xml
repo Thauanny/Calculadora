@@ -4,36 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_purple"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tituloApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/light_purple"
+        android:text="@string/titleCalculadorasPage"
+        android:textColor="@color/purple_700"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tabLayout"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_width="404dp"
+        android:layout_height="47dp"
+        android:background="@color/light_purple"
+        android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloApp"
+        app:layout_constraintBottom_toTopOf="@id/viewPager2"
         app:tabIndicator="@drawable/tab_indicator"
         app:tabIndicatorAnimationMode="elastic"
-        android:elevation="5dp"
-        android:background="@color/light_purple"
         app:tabIndicatorColor="@null"
+        app:tabIndicatorFullWidth="true"
         app:tabIndicatorGravity="stretch"
         app:tabMode="fixed"
-        app:tabIndicatorFullWidth="true"
         app:tabSelectedTextColor="@color/white" />
-
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="414dp"
+        android:background="@color/light_purple"
+        android:layout_height="589dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout"
-        />
+        app:layout_constraintBottom_toTopOf="@id/desenvolvidoPor"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+
+    <TextView
+        android:id="@+id/desenvolvidoPor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/desenvolvidoPor"
+        android:textColor="@color/purple_700"
+        android:textSize="17dp"
+        android:background="@color/light_purple"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager2"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
