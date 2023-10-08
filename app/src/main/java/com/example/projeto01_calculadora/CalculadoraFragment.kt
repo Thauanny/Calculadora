@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
 import net.objecthunter.exp4j.Expression
@@ -106,7 +107,6 @@ class CalculadoraFragment : Fragment() {
     }
 
 
-
     private fun eventosNumeros(view: View) {
 
         var numeroZero = view.findViewById<TextView>(R.id.numeroZero);
@@ -187,7 +187,7 @@ class CalculadoraFragment : Fragment() {
     }
 
     private fun apagarTudo(view: View) {
-     val expressao =   view.findViewById<TextInputEditText>(R.id.expressao);
+        val expressao = view.findViewById<TextInputEditText>(R.id.expressao);
         expressao.setText("");
         expressao.requestFocus();
         view.findViewById<TextView>(R.id.resultado).text = "";
@@ -232,7 +232,6 @@ class CalculadoraFragment : Fragment() {
     }
 
 
-
     private fun realizarCalculo(view: View, isFinal: Boolean = false) {
         val expressao = view?.findViewById<TextView>(R.id.expressao);
         val resultado = view?.findViewById<TextView>(R.id.resultado);
@@ -263,7 +262,7 @@ class CalculadoraFragment : Fragment() {
                 acrescentarExpressao(view, resultado?.text.toString())
             } else {
                 if (calculoEvaluate == calculoResultado.toDouble()) {
-                    resultado?.text =  calculoResultado.toString();
+                    resultado?.text = calculoResultado.toString();
                 } else {
                     val a = calculoEvaluate.toString();
                     resultado?.text = a;
@@ -271,6 +270,12 @@ class CalculadoraFragment : Fragment() {
                 }
             }
 
+        } catch (ex: ArithmeticException) {
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.erroDivisaoZero),
+                Toast.LENGTH_SHORT
+            ).show();
         } catch (e: Exception) {
             println(e);
         }

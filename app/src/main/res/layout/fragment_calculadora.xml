@@ -56,7 +56,7 @@
         android:layout_weight="0.6"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
             android:id="@+id/apagarTudo"
             style="@style/Operators_Button"
             android:text="@string/apagarTudo" />
@@ -80,24 +80,29 @@
         android:layout_weight="0.8"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
             android:id="@+id/numeroSete"
             style="@style/Numeric_Button"
-            android:text="@string/numero7" />
+            android:background="@drawable/botao_normal"
+            android:backgroundTintMode="src_over"
+            android:text="@string/numero7"
+            android:textColor="@color/light_purple"
+            app:rippleColor="@color/light_purple"
+            app:strokeColor="@color/purple_700" />
 
 
-        <TextView
+        <Button
             android:id="@+id/numeroOito"
             style="@style/Numeric_Button"
             android:text="@string/numero8" />
 
 
-        <TextView
+        <Button
             android:id="@+id/numeroNove"
             style="@style/Numeric_Button"
             android:text="@string/numero9" />
 
-        <TextView
+        <Button
             android:id="@+id/somar"
             style="@style/Operators_Button"
             android:text="@string/soma" />
@@ -112,22 +117,22 @@
         android:layout_weight="0.8"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
             android:id="@+id/numeroQuatro"
             style="@style/Numeric_Button"
             android:text="@string/numero4" />
 
-        <TextView
+        <Button
             android:id="@+id/numeroCinco"
             style="@style/Numeric_Button"
             android:text="@string/numero5" />
 
-        <TextView
+        <Button
             android:id="@+id/numeroSeis"
             style="@style/Numeric_Button"
             android:text="@string/numero6" />
 
-        <TextView
+        <Button
             android:id="@+id/subtrair"
             style="@style/Operators_Button"
             android:text="@string/subtracao" />
@@ -143,24 +148,24 @@
         android:orientation="horizontal">
 
 
-        <TextView
+        <Button
             android:id="@+id/numeroUm"
             style="@style/Numeric_Button"
             android:text="@string/numero1" />
 
 
-        <TextView
+        <Button
             android:id="@+id/numeroDois"
             style="@style/Numeric_Button"
             android:text="@string/numero2" />
 
 
-        <TextView
+        <Button
             android:id="@+id/numeroTres"
             style="@style/Numeric_Button"
             android:text="@string/numero3" />
 
-        <TextView
+        <Button
             android:id="@+id/dividir"
             style="@style/Operators_Button"
             android:text="@string/divisao" />
@@ -177,22 +182,22 @@
         android:orientation="horizontal"
         tools:layout_editor_absoluteY="58dp">
 
-        <TextView
+        <Button
             android:id="@+id/ponto"
             style="@style/Numeric_Button"
             android:text="@string/ponto" />
 
-        <TextView
+        <Button
             android:id="@+id/numeroZero"
             style="@style/Numeric_Button"
             android:text="@string/numero0" />
 
-        <TextView
+        <Button
             android:id="@+id/virgula"
             style="@style/Numeric_Button"
             android:text="@string/virgula" />
 
-        <TextView
+        <Button
             android:id="@+id/multiplicar"
             style="@style/Operators_Button"
             android:text="@string/multiplicacao" />
@@ -210,7 +215,7 @@
         tools:layout_editor_absoluteY="58dp">
 
 
-        <TextView
+        <Button
             android:id="@+id/igual"
             style="@style/Result_Button"
             android:text="@string/igual" />

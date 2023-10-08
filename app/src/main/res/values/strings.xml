@@ -25,6 +25,8 @@
     <string name="multiplicacao">x</string>
     <string name="apagarTudo">C</string>
     <string name="igual">=</string>
+    <string name="erroDivisaoZero">Operação não permitida!</string>
+    <string name="erroDesconhecido">Erro desconhecido, tente novamente!</string>
 
 
     <!--fragment notas -->
