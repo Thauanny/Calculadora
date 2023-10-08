@@ -16,6 +16,7 @@
         android:text="@string/titleCalculadorasPage"
         android:textColor="@color/purple_700"
         android:textSize="28dp"
+        android:layout_marginBottom="16dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

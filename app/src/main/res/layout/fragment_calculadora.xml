@@ -14,8 +14,7 @@
         android:id="@+id/expressao"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginEnd="10dp"
+        android:layout_height="70dp"
         android:background="@android:color/transparent"
         android:clickable="true"
         android:ellipsize="start"
@@ -27,13 +26,13 @@
         android:text=""
         android:textColor="@color/purple_700"
         android:textIsSelectable="true"
-        android:textSize="40sp" />
+        android:textSize="35sp" />
 
 
     <TextView
         android:id="@+id/resultado"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="25dp"
         android:ellipsize="end"
         android:gravity="end"
