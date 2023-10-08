@@ -33,6 +33,7 @@ class NotasFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,7 +43,7 @@ class NotasFragment : Fragment() {
     }
 
 
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val etNota1 = view.findViewById<EditText>(R.id.nota1)
         val etNota2 = view.findViewById<EditText>(R.id.nota2)
@@ -60,7 +61,7 @@ class NotasFragment : Fragment() {
 
                 Toast.makeText(
                     requireContext(),
-                    "Por favor, insira a nota da 1ª unidade",
+                    getString(R.string.avisoSemNotaUnidade1),
                     Toast.LENGTH_SHORT
                 ).show();
             }
@@ -70,39 +71,69 @@ class NotasFragment : Fragment() {
             val nota3 = nota3Text.toFloatOrNull()
 
             if (nota1 != null) {
-                if (nota2 != null && nota3 != null) {
-                    val media = (nota1 + nota2 + nota3) / 3
+                if (nota1 >= 3) {
+                    if (nota2 != null && nota3 != null) {
+                        val media = (nota1 + nota2 + nota3) / 3
 
-                    if (media >= 7.0) {
-                        FragmentUtils.hideKeyboard(view);
-                        tvResultado.text = "Aprovado com média: $media"
-                    } else if (media >= 5.0) {
-                        FragmentUtils.hideKeyboard(view);
-                        tvResultado.text = "Aprovado por nota com média: $media"
-                    } else {
-                        FragmentUtils.hideKeyboard(view);
-                        tvResultado.text = "Reprovado com média: $media"
-                    }
-                } else if (nota2 != null) {
-                    val mediaNecessaria = (21 - (nota1 + nota2)) / 3
+                        if (media >= 7.0) {
+                            FragmentUtils.hideKeyboard(view);
+                            tvResultado.text = getString(R.string.aprovadorPorMedia, "$media");
+                        } else if (media >= 5.0) {
+                            FragmentUtils.hideKeyboard(view);
+                            tvResultado.text = getString(R.string.aprovadorPorNota, "$media");
+                        } else {
+                            if (nota2 < 3 || nota3 < 3) {
+                                FragmentUtils.hideKeyboard(view);
+                                tvResultado.text = getString(R.string.avisoQuartaProva);
+                            } else {
+                                FragmentUtils.hideKeyboard(view);
+                                tvResultado.text = getString(R.string.reprovadoPorMedia, "$media");
 
-                    if (mediaNecessaria <= 10) {
-                        FragmentUtils.hideKeyboard(view);
-                        tvResultado.text = "Com $mediaNecessaria na 3ª você será aprovado por média"
+                            }
+                        }
+                    } else if (nota2 != null) {
+                        if (nota2 >= 3) {
+                            val mediaNecessaria = (15 - (nota1 + nota2)) / 3
+
+                            if (mediaNecessaria <= 15) {
+                                FragmentUtils.hideKeyboard(view);
+                                tvResultado.text = getString(
+                                    R.string.aprovadoPorMediaNaTerceira,
+                                    "$mediaNecessaria"
+                                );
+                            } else {
+                                FragmentUtils.hideKeyboard(view);
+                                tvResultado.text = getString(R.string.naoPodeSerAprovadoPorMedia);
+                            }
+                        } else {
+                            FragmentUtils.hideKeyboard(view);
+                            tvResultado.text = getString(R.string.avisoQuartaProva);
+                        }
+
                     } else {
-                        FragmentUtils.hideKeyboard(view);
-                        tvResultado.text = "Você não pode ser aprovado por média"
+                        if (nota3 != null && nota3 < 3) {
+
+                            FragmentUtils.hideKeyboard(view);
+                            tvResultado.text = getString(R.string.avisoQuartaProva);
+
+                        } else {
+                            val notaNecessaria = ((15 - nota1) / 2).coerceAtLeast(0f)
+
+                            if (notaNecessaria <= 10) {
+                                FragmentUtils.hideKeyboard(view);
+                                tvResultado.text =
+                                    getString(R.string.avisoNota2e3Unidade, "$notaNecessaria");
+
+                            } else {
+                                FragmentUtils.hideKeyboard(view);
+                                tvResultado.text = getString(R.string.naoPodeSerAprovadoPorNota);
+                            }
+                        }
+
                     }
                 } else {
-                    val notaNecessaria = (10 - nota1).coerceAtLeast(0f)
-
-                    if (notaNecessaria <= 10) {
-                        FragmentUtils.hideKeyboard(view);
-                        tvResultado.text = "Com $notaNecessaria na 2ª e na 3ª você será aprovado por nota"
-                    } else {
-                        FragmentUtils.hideKeyboard(view);
-                        tvResultado.text = "Você não pode ser aprovado por nota"
-                    }
+                    FragmentUtils.hideKeyboard(view);
+                    tvResultado.text = getString(R.string.avisoQuartaProva);
                 }
             }
         }

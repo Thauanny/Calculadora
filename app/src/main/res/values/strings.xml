@@ -28,15 +28,28 @@
 
 
     <!--fragment notas -->
+        <!-- layout strings -->
 
-    <string name="titleNotasPage">Calcule sua média</string>
-    <string name="primeiraUnidade">"Calcule a nota da primeira unidade:"</string>
-    <string name="situacao">"Situação:"</string>
-    <string name="segundaUnidade">"Calcule a nota da segunda unidade:"</string>
-    <string name="terceiraUnidade">"Calcule a nota da terceira unidade:"</string>
-    <string name="resultadoNotasHintText">Insira suas notas para iniciar!</string>
-    <string name="buttonCalcularNotas">Calcular!</string>
-    <string name="hintTextNotas">Insira sua nota. Exemplo "7,0"</string>
+        <string name="titleNotasPage">Calcule sua média</string>
+        <string name="primeiraUnidade">"Calcule a nota da primeira unidade:"</string>
+        <string name="situacao">"Situação:"</string>
+        <string name="segundaUnidade">"Calcule a nota da segunda unidade:"</string>
+        <string name="terceiraUnidade">"Calcule a nota da terceira unidade:"</string>
+        <string name="resultadoNotasHintText">Insira suas notas para iniciar!</string>
+        <string name="buttonCalcularNotas">Calcular!</string>
+        <string name="hintTextNotas">Insira sua nota. Exemplo "7,0"</string>
+        <!-- retornos e avisos-->
+        <string name="avisoSemNotaUnidade1">Por favor, insira a nota da 1ª unidade!</string>
+        <string name="aprovadorPorMedia">Aprovado com média: %s!</string>
+        <string name="aprovadorPorNota">Aprovado por nota com média: %s!</string>
+        <string name="reprovadoPorMedia">Reprovado com média: %s!</string>
+        <string name="avisoQuartaProva">Nota minima nas unidades de 3, encaminhado para 4 prova</string>
+        <string name="aprovadoPorMediaNaTerceira">Com %s na 3ª você será aprovado por média.</string>
+        <string name="naoPodeSerAprovadoPorMedia">Você não pode ser aprovado por média.</string>
+        <string name="avisoNota2e3Unidade">Com %s na 2ª e na 3ª você será aprovado por nota.</string>
+        <string name="naoPodeSerAprovadoPorNota">Você não pode ser aprovado por nota.</string>
+
+
 
 
 </resources>
