@@ -1,158 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotasFragment">
+    tools:context=".NotasFragment"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_weight="1"      >
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
-            android:id="@+id/title2fragment"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:gravity="center"
-            android:text="@string/titleNotasPage"
-            android:textColor="@color/purple_700"
-            android:textSize="28dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/decriptionNota1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="24dp"
-            android:gravity="center"
-            android:text="@string/primeiraUnidade"
-            android:textColor="@color/purple_700"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/nota1"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner_numeric_button"
-            android:hint="@string/hintTextNotas"
-            android:inputType="number"
-            android:digits="0123456789"
-            android:paddingLeft="24dp"
-            android:text=""
-            android:textColor="@color/purple_700"
-            android:textColorHint="@color/purple_700WitOpacity" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
-        <TextView
-            android:id="@+id/decriptionNota2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/segundaUnidade"
-            android:textColor="@color/purple_700"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/title2fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="@string/titleNotasPage"
+                android:textColor="@color/purple_700"
+                android:textSize="28dp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/nota2"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner_numeric_button"
-            android:hint="@string/hintTextNotas"
-            android:inputType="number"
-            android:digits="0123456789"
-            android:paddingLeft="24dp"
-            android:text=""
-            android:textColor="@color/purple_700"
-            android:textColorHint="@color/purple_700WitOpacity" />
+            <TextView
+                android:id="@+id/decriptionNota1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/primeiraUnidade"
+                android:textColor="@color/purple_700"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
-
-        <TextView
-            android:id="@+id/decriptionNota3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/terceiraUnidade"
-            android:textColor="@color/purple_700"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/nota3"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:inputType="number"
-            android:digits="0123456789"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner_numeric_button"
-            android:hint="@string/hintTextNotas"
-            android:paddingLeft="24dp"
-            android:text=""
-            android:textColor="@color/purple_700"
-            android:textColorHint="@color/purple_700WitOpacity" />
+            <EditText
+                android:id="@+id/nota1"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_numeric_button"
+                android:digits="0123456789"
+                android:hint="@string/hintTextNotas"
+                android:inputType="number"
+                android:paddingLeft="24dp"
+                android:text=""
+                android:textColor="@color/purple_700"
+                android:textColorHint="@color/purple_700WitOpacity" />
 
 
-        <TextView
-            android:id="@+id/situacao"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/situacao"
-            android:textColor="@color/purple_700"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/decriptionNota2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/segundaUnidade"
+                android:textColor="@color/purple_700"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nota2"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_numeric_button"
+                android:digits="0123456789"
+                android:hint="@string/hintTextNotas"
+                android:inputType="number"
+                android:paddingLeft="24dp"
+                android:text=""
+                android:textColor="@color/purple_700"
+                android:textColorHint="@color/purple_700WitOpacity" />
 
 
-        <TextView
-            android:id="@+id/resultadoNotas"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner_numeric_button"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="@string/resultadoNotasHintText"
-            android:textColor="@color/purple_700"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/decriptionNota3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/terceiraUnidade"
+                android:textColor="@color/purple_700"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnCalcular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="24dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner_numeric_button"
-            android:gravity="center"
-            android:text="@string/buttonCalcularNotas" />
+            <EditText
+                android:id="@+id/nota3"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_numeric_button"
+                android:digits="0123456789"
+                android:hint="@string/hintTextNotas"
+                android:inputType="number"
+                android:paddingLeft="24dp"
+                android:text=""
+                android:textColor="@color/purple_700"
+                android:textColorHint="@color/purple_700WitOpacity" />
 
 
-    </LinearLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/situacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/situacao"
+                android:textColor="@color/purple_700"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/resultadoNotas"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_numeric_button"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/resultadoNotasHintText"
+                android:textColor="@color/purple_700"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corner_numeric_button"
+        android:gravity="center"
+        android:text="@string/buttonCalcularNotas" />
+
+</LinearLayout>
